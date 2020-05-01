@@ -1,0 +1,38 @@
+<div class="spinner-border text-primary" role="status" [hidden]="!showLoader">
+    <span class="sr-only">Loading...</span>
+</div>
+
+<h1 *ngIf="coronadata" [hidden]="showLoader">
+    <span class="badge badge-danger">Confirmed<br>{{coronadata[0].confirmed}}</span>&nbsp;&nbsp;
+    <span class="badge badge-primary">Active<br>{{coronadata[0].active}}</span>&nbsp;&nbsp;
+    <span class="badge badge-success">Recovered<br>{{coronadata[0].recovered}}</span>&nbsp;&nbsp;
+    <span class="badge badge-secondary">Death<br>{{coronadata[0].deaths}}</span>
+</h1>
+<br/>
+
+<h3>Daily cases</h3>
+<button *ngFor="let data of casedata | slice:-3" type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="New case: {{data.dailyconfirmed}}" style="margin-right: 10px;">
+    {{data.date}}
+</button>
+<br/><br/>
+
+<table class="table" [hidden]="showLoader">
+    <thead>
+      <tr>
+        <th scope="col">State</th>
+        <th scope="col">Confirmed</th>
+        <th scope="col">Active</th>
+        <th scope="col">Recovered</th>
+        <th scope="col">Death</th>        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of coronadata | slice:1">
+        <th scope="row">{{data.state}}</th>
+        <td class="text-danger">{{data.confirmed}}</td>
+        <td class="text-primary">{{data.active}}</td>        
+        <td class="text-success">{{data.recovered}}</td>
+        <td>{{data.deaths}}</td>
+      </tr>
+    </tbody>
+  </table>
