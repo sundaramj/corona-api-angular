@@ -1,31 +1,26 @@
-<<<<<<< HEAD
-# AngularCoronaApi
+# Angular api call using HttpClientModule
+Angular call api to get data &amp; display corona details on page
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
+## Run project
+ng serve to run a project, default is http://localhost:4200/
 
-## Development server
+## Command
+* create a new app : *ng new project-name*
+* new component : *ng g c component-name*
+* new modules : *ng g m modules-name*
+* new services : *ng g s services-name*
+* Bootstrap ng add @ng-bootstrap/schematics - for reference [Angular Bootstrap](https://ng-bootstrap.github.io/#/getting-started)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Note
+1. Redirect home url to /corona from src/app/app-routing.module.ts file you can change based on requirements.
+2. Its taking base url from src/environments/environment.ts for dev environment. On production it takes url from src/environments/environment.prod.ts.
+3. If url is incorrect so it will go to the notfound component to display common not found page. that is also handled in src/app/app-routing.module.ts file.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Deployment
+Below command will create dist folder inside your project. For dev it will take baseurl from environment.ts file & for prod environment.prod.ts.
+* Dev environment : *ng b*
+* Prod environment : *ng b --prod*
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-=======
-# corona-api-angular
->>>>>>> 67dd615dbd71fff03f82ed8abb05401b6fba5998
+## Project Screenshot
+![Screenshot]https://github.com/sundaramj/corona-api-angular/blob/master/project-screeshot.jpg)
