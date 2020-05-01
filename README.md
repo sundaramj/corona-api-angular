@@ -23,4 +23,4 @@ Below command will create dist folder inside your project. For dev it will take 
 * Prod environment : *ng b --prod*
 
 ## Project Screenshot
-![Screenshot]https://github.com/sundaramj/corona-api-angular/blob/master/project-screeshot.jpg)
+![Screenshot](https://github.com/sundaramj/corona-api-angular/blob/master/project-screeshot.jpg)
